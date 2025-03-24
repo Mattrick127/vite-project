@@ -98,7 +98,7 @@ function App() {
                     
                     <div className="product">
                         <div className="photo">
-                            <img src="./img/chelsea.webp" />
+                            <img src={"./img/" + item.photo}/>
                         </div>
                         <div className="description">
                             <span className="name">{item.name}</span>
