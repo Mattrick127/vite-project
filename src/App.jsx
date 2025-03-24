@@ -99,7 +99,7 @@ function App() {
                         <img src="././img/real_madrid.webp" />
                     </div>
                     <div className="description">
-                        <span className="name">Real Madrid</span>
+                        <span className="name"></span>
                         <span className="price">$ 119.99</span>
                         <div className="quantity-area">
                             <button>-</button>
@@ -108,7 +108,7 @@ function App() {
                         </div>
                     </div>
                 </div>
-                <div className="product">
+                 {/*<div className="product">
                     <div className="photo">
                         <img src="./img/milan.png" />
                     </div>
@@ -220,7 +220,7 @@ function App() {
                             <button>+</button>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </section>
             
 
