@@ -11,7 +11,7 @@ function App() {
             price: 119.99,
             active: false,
             quantity: 1, 
-            isInBag: false
+            isInBag: true
         },
         {
 
@@ -96,7 +96,7 @@ function App() {
 
                 { items.map(item => 
                     
-                    <div key={item.id} className="product">
+                    <div key={item.id} className={`product ${item.isInBag ? 'selected' : ''}`}>
                         <div className="photo">
                             <img src={"./img/" + item.photo}/>
                         </div>
