@@ -103,14 +103,14 @@ function App() {
                         <div className="description">
                             <span className="name">{item.name}</span>
                             <span className="price">$ {item.price}</span>
-                    { item.isInBag ?
+                    { item.isInBag &&
                             <div className="quantity-area">
                                 <button>-</button>
                                 <span className="quantity">{item.quantity}</span>
                                 <button>+</button>
                             </div>
 
-                            : ''
+                            
                     }
                         </div>
                     </div>
