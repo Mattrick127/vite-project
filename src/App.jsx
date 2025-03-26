@@ -95,14 +95,15 @@ function App() {
 
     const itemsInBag = items.filter(item => item.isInBag);
 
-    function selectHandler (id) {
-
+    function selectHandler(id) {
+        let item = items.filter(item => item.id === id)[0];
+        console.log(item);
     }
 
     return ( 
         <>
             <section className="items">
-                <h4>{shopName}</h4>
+                <h4>{ shopName }</h4>
 
                 { items.map(item => 
                 <Item 
