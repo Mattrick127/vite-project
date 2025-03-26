@@ -95,6 +95,10 @@ function App() {
 
     const itemsInBag = items.filter(item => item.isInBag);
 
+    function selectHandler (id) {
+
+    }
+
     return ( 
         <>
             <section className="items">
@@ -102,7 +106,7 @@ function App() {
 
                 { items.map(item => 
                 <Item 
-                    selectProduct={(id) => setItems([])}
+                    selectProduct={(id) => selectHandler(id)}
                     item={item}
                     key={item.id}
                     />
