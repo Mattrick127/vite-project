@@ -5,6 +5,8 @@ import { useState } from 'react';
 
 function App() {
 
+    const shopName = "Jersey Shop Made with React JS by Mattrick127";
+
     const [items, setItems] = useState(
     [
         {
@@ -92,8 +94,6 @@ function App() {
     ]);
 
     const itemsInBag = items.filter(item => item.isInBag);
-
-    const shopName = "Jersey Shop Made with React JS";
 
     return ( 
         <>
