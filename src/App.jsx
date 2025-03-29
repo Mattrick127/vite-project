@@ -17,7 +17,7 @@ function App() {
             price: 119.99,
             active: false,
             quantity: 1, 
-            isInBag: true
+            isInBag: false
         },
         {
 
@@ -97,7 +97,8 @@ function App() {
 
     function selectHandler(id) {
         let item = items.filter(item => item.id === id)[0];
-        console.log(item);
+        item.isInBag = !item.isInBag;
+        setItems(item);
     }
 
     return ( 
@@ -120,6 +121,6 @@ function App() {
             
         </>
     );
-}
+};
 
 export default App
