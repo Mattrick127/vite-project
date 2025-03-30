@@ -114,7 +114,7 @@ function App() {
                     />
                     
                 ) }
-
+Hola lol
             </section>
             
             {itemsInBag.length > 0 && <OrderDetails />}
