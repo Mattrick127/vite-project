@@ -1,5 +1,5 @@
-function OrderDetails () {
-    return (
+function OrderDetails ({itemsInBag}) {
+    return ( 
             <>
                 <section className="summary">
                     <strong>Order Details</strong>
@@ -11,10 +11,13 @@ function OrderDetails () {
                             </tr>
                         </thead>
                         <tbody>
+                                    
+                        { itemsInBag.map(item =>                             
                             <tr>
-                                <td>1x Real Madrid</td>
-                                <td>$ 119.99</td>
+                                <td>{item.quantity}x {item.name}</td>
+                                <td>$ {item.price * item.quantity}</td>
                             </tr>
+                        ) }
                             
                             <tr>
                                 <th>Total</th>
