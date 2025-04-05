@@ -97,7 +97,8 @@ function App() {
 
     function selectHandler(id) {
         let item = items.filter(item => item.id ===id)[0];
-        console.log(item);
+        item.isInBag = !item.isInBag;
+        setItems(items.map(el => el.id === id ? item : el));
     }
 
     return ( 
