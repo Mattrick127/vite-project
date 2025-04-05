@@ -1,4 +1,12 @@
 function OrderDetails ({itemsInBag}) {
+
+    function calculateTotal(){
+        
+        let orderTotal = 0;
+        itemsInBag.forEach(item => orderTotal += item.price * item.quantity);
+        return orderTotal.toFixed(2);
+    }
+
     return ( 
             <>
                 <section className="summary">
@@ -15,13 +23,13 @@ function OrderDetails ({itemsInBag}) {
                         { itemsInBag.map(item =>                             
                             <tr>
                                 <td>{item.quantity}x {item.name}</td>
-                                <td>$ {item.price * item.quantity}</td>
+                                <td>$ {(item.price * item.quantity).toFixed(2)}</td>
                             </tr>
                         ) }
                             
                             <tr>
                                 <th>Total</th>
-                                <th>$ 119.99</th>
+                                <th>$ {calculateTotal()}</th>
                             </tr>
                         </tbody>
                     </table>
