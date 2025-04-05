@@ -1,9 +1,4 @@
-function Item ({item, selectProduct}) {
-
-    function quantityHandler(e){
-        e.stopPropagation();
-        alert('change quantity')
-    }
+function Item ({items, item, selectProduct, changeQuantity}) {
 
     return (
         
@@ -17,9 +12,9 @@ function Item ({item, selectProduct}) {
                 <span className="price">$ {item.price}</span>
         { item.isInBag &&
                 <div className="quantity-area">
-                    <button onClick ={(e) => quantityHandler(e)}>-</button>
+                    <button disabled="{item.quantity<=1}" onClick ={(e) => changeQuantity(e, item.id, -1)}>-</button>
                     <span className="quantity">{item.quantity}</span>
-                    <button onClick ={(e) => quantityHandler(e)}>+</button>
+                    <button onClick ={(e) => changeQuantity(e, item.id, +1)}>+</button>
                 </div>
 
                 
