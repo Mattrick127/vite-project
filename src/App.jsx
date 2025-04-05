@@ -96,14 +96,12 @@ function App() {
     const itemsInBag = items.filter(item => item.isInBag);
 
     function selectHandler(id) {
-        let item = items.filter(item => item.id === id)[0];
-        item.isInBag = !item.isInBag;
-        setItems(item);
+        alert(`clicked ${id}`);
     }
 
     return ( 
         <>
-            <section className="items">
+            <section className="items"> 
                 <h4>{ shopName }</h4>
 
                 { items.map(item => 
@@ -114,7 +112,6 @@ function App() {
                     />
                     
                 ) }
-Hola lol
             </section>
             
             {itemsInBag.length > 0 && <OrderDetails />}
