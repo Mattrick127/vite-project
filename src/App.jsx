@@ -96,7 +96,8 @@ function App() {
     const itemsInBag = items.filter(item => item.isInBag);
 
     function selectHandler(id) {
-        alert(`clicked ${id}`);
+        let item = items.filter(item => item.id ===id)[0];
+        console.log(item);
     }
 
     return ( 
